@@ -1,3 +1,5 @@
+import transition from "./../transition";
+
 function Home() {
   return (
     <div>
@@ -5,5 +7,6 @@ function Home() {
     </div>
   );
 }
+const TransitionedHome = transition(Home);
 
-export default Home;
+export default TransitionedHome;

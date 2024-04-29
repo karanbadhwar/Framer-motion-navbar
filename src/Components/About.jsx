@@ -1,3 +1,5 @@
+import transition from "./../transition";
+
 function About() {
   return (
     <div>
@@ -6,4 +8,6 @@ function About() {
   );
 }
 
-export default About;
+const TransitionedAbout = transition(About);
+
+export default TransitionedAbout;

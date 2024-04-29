@@ -10,17 +10,17 @@ function Navbar() {
           </NavLink>
         </div>
         <div className="nav-links">
-          <div className="nav-link">
+          <div className="nav-item">
             <NavLink className="nav-link" to="/about">
               About
             </NavLink>
           </div>
-          <div className="nav-link">
+          <div className="nav-item">
             <NavLink className="nav-link" to="/contact">
               Contact
             </NavLink>
           </div>
-          <div className="nav-link">
+          <div className="nav-item">
             <NavLink className="nav-link" to="/">
               Home
             </NavLink>

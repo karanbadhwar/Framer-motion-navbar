@@ -1,3 +1,4 @@
+import transition from "./../transition";
 function Contact() {
   return (
     <div>
@@ -5,5 +6,6 @@ function Contact() {
     </div>
   );
 }
+const TransitionedContact = transition(Contact);
 
-export default Contact;
+export default TransitionedContact;

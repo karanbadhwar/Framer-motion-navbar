@@ -1,9 +1,10 @@
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./Components/Navbar";
-import Home from "./Components/Home";
-import About from "./Components/About";
-import Contact from "./Components/Contact";
+import TransitionedHome from "./Components/Home";
+import TransitionedAbout from "./Components/About";
+import TransitionedContact from "./Components/Contact";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const location = useLocation();
@@ -11,11 +12,13 @@ function App() {
   return (
     <>
       <Navbar />
-      <Routes location={location} key={location.pathname}>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route index element={<TransitionedHome />} />
+          <Route path="/about" element={<TransitionedAbout />} />
+          <Route path="/contact" element={<TransitionedContact />} />
+        </Routes>
+      </AnimatePresence>
     </>
   );
 }
